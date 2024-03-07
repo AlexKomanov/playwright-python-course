@@ -1,8 +1,13 @@
 import pytest
+import math
 
 
 def test_one_add_one():
     assert 1 + 1 == 2
+
+
+def test_math_pow():
+    assert math.pow(3, 3) == 27
 
 
 def test_one_add_two():
@@ -34,4 +39,3 @@ test_data = [
 @pytest.mark.parametrize("num_1, num_2, result", test_data)
 def test_multiplication(num_1, num_2, result):
     assert num_1 * num_2 == result
-

@@ -1,6 +1,6 @@
 class Accumulator:
-    def __init__(self):
-        self.__count = 0
+    def __init__(self, count=0):
+        self.__count = count
         self.__brand = "Accumulator"
 
     @property

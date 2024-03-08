@@ -2,14 +2,17 @@ import pytest
 import math
 
 
+@pytest.mark.sanity
 def test_one_add_one():
     assert 1 + 1 == 2
 
 
+@pytest.mark.regression
 def test_math_pow():
     assert math.pow(3, 3) == 27
 
 
+@pytest.mark.sanity
 def test_one_add_two():
     num_1 = 1
     num_2 = 2
@@ -18,6 +21,7 @@ def test_one_add_two():
     assert num_1 + num_2 == result, "A result should be three"
 
 
+@pytest.mark.regression
 def test_divide_by_zero():
     with pytest.raises(Exception) as err:
         num_1 = 5 / 0

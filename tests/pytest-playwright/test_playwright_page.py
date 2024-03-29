@@ -10,6 +10,6 @@ def test_playwright_python_docs(page: Page):
 
 def test_playwright_python_api(page: Page):
     page.goto("https://playwright.dev/python/")
-    page.get_by_role(role='link', name='Docs33333333').click(timeout=5000)
+    page.get_by_role(role='link', name='Docs').click(timeout=5000)
     expect(page).to_have_url('https://playwright.dev/python/docs/intro')
     page.wait_for_timeout(2000)

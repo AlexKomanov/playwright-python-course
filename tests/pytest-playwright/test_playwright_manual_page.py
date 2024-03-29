@@ -5,8 +5,8 @@ from playwright.sync_api import Page, Playwright
 @pytest.fixture(scope='function')
 def setup(playwright: Playwright) -> Page:
     # browser = playwright.chromium.launch(headless=True, slow_mo=500, args=["--start-maximized"])
-    browser = playwright.chromium.launch(headless=True, slow_mo=500, args=["--start-maximized"])
-    page = browser.new_page(no_viewport=True)
+    browser = playwright.chromium.launch(headless=True, slow_mo=500)
+    page = browser.new_page()
 
     page.goto("https://playwright.dev/python/")
 
